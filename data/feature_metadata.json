@@ -1,0 +1,439 @@
+{
+  "total_features": 107,
+  "n_runs": 2450,
+  "n_conditions": 49,
+  "o2_levels": [
+    "21.0",
+    "5.0",
+    "2.1",
+    "0.5",
+    "0.1",
+    "0.021",
+    "0.005"
+  ],
+  "particle_keys": [
+    "electron_mono",
+    "proton_psobp",
+    "proton_dsobp",
+    "helium_psobp",
+    "helium_dsobp",
+    "carbon_psobp",
+    "carbon_dsobp"
+  ],
+  "meta_columns": [
+    "prefix",
+    "particle_key",
+    "particle",
+    "sobp",
+    "let",
+    "dir_name",
+    "o2",
+    "run_id",
+    "is_normoxic"
+  ],
+  "modalities": {
+    "Spatial Distribution": {
+      "prefix": "m1_",
+      "n_features": 33,
+      "nan_frac": 0.0,
+      "features": [
+        "m1_centroid_x_um",
+        "m1_centroid_y_um",
+        "m1_centroid_z_um",
+        "m1_frac_nn_within_0.5um",
+        "m1_frac_nn_within_1.0um",
+        "m1_frac_nn_within_2.0um",
+        "m1_h0_max_lifetime_um",
+        "m1_h0_mean_lifetime_um",
+        "m1_h0_n_long_components",
+        "m1_h0_total_persistence_um",
+        "m1_h1_max_persistence_um",
+        "m1_h1_mean_persistence_um",
+        "m1_h1_n_loops",
+        "m1_h1_total_persistence_um",
+        "m1_n_dsbs",
+        "m1_nn_mean_um",
+        "m1_nn_median_um",
+        "m1_nn_std_um",
+        "m1_r_from_center_mean_um",
+        "m1_r_from_center_skew",
+        "m1_r_from_center_std_um",
+        "m1_radius_of_gyration_um",
+        "m1_ripley_K_0.5um",
+        "m1_ripley_K_1.0um",
+        "m1_ripley_K_1.5um",
+        "m1_ripley_K_2.0um",
+        "m1_ripley_L_0.5um",
+        "m1_ripley_L_1.0um",
+        "m1_ripley_L_1.5um",
+        "m1_ripley_L_2.0um",
+        "m1_std_x_um",
+        "m1_std_y_um",
+        "m1_std_z_um"
+      ]
+    },
+    "Radial Track Structure": {
+      "prefix": "m2_",
+      "n_features": 14,
+      "nan_frac": 0.0,
+      "features": [
+        "m2_axial_radial_ratio",
+        "m2_complexity_r_spearman",
+        "m2_frac_r_lt_0.5um",
+        "m2_frac_r_lt_1.0um",
+        "m2_frac_r_lt_1.5um",
+        "m2_frac_r_lt_2.0um",
+        "m2_r_entropy",
+        "m2_r_kurtosis",
+        "m2_r_mean_um",
+        "m2_r_skew",
+        "m2_r_std_um",
+        "m2_ripley_K2D_0.5um",
+        "m2_ripley_K2D_1.0um",
+        "m2_z_std_um"
+      ]
+    },
+    "Local Energy Heterogeneity": {
+      "prefix": "m3_",
+      "n_features": 13,
+      "nan_frac": 0.0,
+      "features": [
+        "m3_dsb_energy_enrichment",
+        "m3_dsb_voxel_energy_mean_MeV",
+        "m3_dsb_voxel_energy_std_MeV",
+        "m3_energy_cv",
+        "m3_energy_entropy",
+        "m3_energy_gini",
+        "m3_energy_hot_spots",
+        "m3_energy_mean_MeV",
+        "m3_energy_n_nonzero",
+        "m3_energy_std_MeV",
+        "m3_energy_top10pct_frac",
+        "m3_energy_top25pct_frac",
+        "m3_energy_top5pct_frac"
+      ]
+    },
+    "Dose Distribution": {
+      "prefix": "m4_",
+      "n_features": 10,
+      "nan_frac": 0.0,
+      "features": [
+        "m4_D10_Gy",
+        "m4_D50_Gy",
+        "m4_D90_Gy",
+        "m4_dose_cv",
+        "m4_dose_entropy",
+        "m4_dose_mean_Gy",
+        "m4_dose_std_Gy",
+        "m4_frac_above_mean",
+        "m4_frac_above_mean_1sd",
+        "m4_frac_above_mean_2sd"
+      ]
+    },
+    "Genomic Location": {
+      "prefix": "m5_",
+      "n_features": 16,
+      "nan_frac": 0.0,
+      "features": [
+        "m5_dsbs_per_chrom_std",
+        "m5_dsbs_per_occupied_chrom_mean",
+        "m5_frac_intra_chrom_pairs",
+        "m5_frac_intra_lt_1.0Mbp",
+        "m5_frac_intra_lt_10.0Mbp",
+        "m5_frac_intra_lt_5.0Mbp",
+        "m5_gini_per_chrom",
+        "m5_intra_dist_mean_Mbp",
+        "m5_intra_dist_std_Mbp",
+        "m5_max_dsbs_per_chrom",
+        "m5_n_chroms_with_ge1_dsb",
+        "m5_n_chroms_with_ge2_dsbs",
+        "m5_ph1d_gini_gaps",
+        "m5_ph1d_max_gap_Mbp",
+        "m5_ph1d_mean_gap_Mbp",
+        "m5_ph1d_n_chroms_analysed"
+      ]
+    },
+    "Damage Complexity": {
+      "prefix": "m6_",
+      "n_features": 11,
+      "nan_frac": 0.0,
+      "features": [
+        "m6_complexity_r_spearman",
+        "m6_complexity_score_mean",
+        "m6_complexity_score_var",
+        "m6_frac_DSB",
+        "m6_frac_DSBplus",
+        "m6_frac_DSBpp",
+        "m6_frac_has_base_damage",
+        "m6_n_base_damage_mean",
+        "m6_n_base_damage_std",
+        "m6_n_extra_backbone_mean",
+        "m6_n_extra_backbone_std"
+      ]
+    },
+    "Topological Summaries": {
+      "prefix": "m7_",
+      "n_features": 10,
+      "nan_frac": 0.0,
+      "features": [
+        "m7_h0_betti0_mean",
+        "m7_h0_betti0_var",
+        "m7_h0_landscape_integral",
+        "m7_h0_landscape_peak_t",
+        "m7_h0_persistent_entropy",
+        "m7_h1_betti1_mean",
+        "m7_h1_betti1_var",
+        "m7_h1_landscape_integral",
+        "m7_h1_landscape_peak_t",
+        "m7_h1_persistent_entropy"
+      ]
+    }
+  },
+  "conditions": [
+    {
+      "particle_key": "carbon_dsobp",
+      "o2": "0.005",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_dsobp",
+      "o2": "0.021",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_dsobp",
+      "o2": "0.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_dsobp",
+      "o2": "0.5",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_dsobp",
+      "o2": "2.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_dsobp",
+      "o2": "21.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_dsobp",
+      "o2": "5.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_psobp",
+      "o2": "0.005",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_psobp",
+      "o2": "0.021",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_psobp",
+      "o2": "0.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_psobp",
+      "o2": "0.5",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_psobp",
+      "o2": "2.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_psobp",
+      "o2": "21.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "carbon_psobp",
+      "o2": "5.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "electron_mono",
+      "o2": "0.005",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "electron_mono",
+      "o2": "0.021",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "electron_mono",
+      "o2": "0.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "electron_mono",
+      "o2": "0.5",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "electron_mono",
+      "o2": "2.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "electron_mono",
+      "o2": "21.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "electron_mono",
+      "o2": "5.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_dsobp",
+      "o2": "0.005",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_dsobp",
+      "o2": "0.021",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_dsobp",
+      "o2": "0.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_dsobp",
+      "o2": "0.5",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_dsobp",
+      "o2": "2.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_dsobp",
+      "o2": "21.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_dsobp",
+      "o2": "5.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_psobp",
+      "o2": "0.005",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_psobp",
+      "o2": "0.021",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_psobp",
+      "o2": "0.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_psobp",
+      "o2": "0.5",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_psobp",
+      "o2": "2.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_psobp",
+      "o2": "21.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "helium_psobp",
+      "o2": "5.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_dsobp",
+      "o2": "0.005",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_dsobp",
+      "o2": "0.021",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_dsobp",
+      "o2": "0.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_dsobp",
+      "o2": "0.5",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_dsobp",
+      "o2": "2.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_dsobp",
+      "o2": "21.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_dsobp",
+      "o2": "5.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_psobp",
+      "o2": "0.005",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_psobp",
+      "o2": "0.021",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_psobp",
+      "o2": "0.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_psobp",
+      "o2": "0.5",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_psobp",
+      "o2": "2.1",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_psobp",
+      "o2": "21.0",
+      "n_runs": 50
+    },
+    {
+      "particle_key": "proton_psobp",
+      "o2": "5.0",
+      "n_runs": 50
+    }
+  ]
+}
