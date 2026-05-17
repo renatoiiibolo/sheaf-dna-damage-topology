@@ -1,0 +1,27 @@
+# sheaf-dna-damage-topology — Python dependencies
+# Install with: pip install -r requirements.txt
+#
+# Tested on Python 3.10 and 3.11.
+# GPU training requires CUDA 11.8+ (PyTorch 2.x).
+
+# ── Core deep learning ────────────────────────────────────────────────────────
+torch>=2.0.0
+torchvision>=0.15.0
+
+# ── Optional: faster Householder reflections (used in orthogonal_thin.py)
+# torch-householder>=0.2.0     # uncomment if using Householder backend
+#                              # install: pip install torch-householder
+
+# ── Numerical and scientific computing ────────────────────────────────────────
+numpy>=1.24.0
+scipy>=1.10.0
+pandas>=2.0.0
+scikit-learn>=1.2.0
+
+# ── Visualisation ─────────────────────────────────────────────────────────────
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+tqdm>=4.65.0         # progress bars during training
+pyyaml>=6.0          # config file support (optional)
